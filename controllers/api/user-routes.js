@@ -3,6 +3,7 @@ const { User } = require('../../models');
 
 // CREATE new user
 router.post('/', async (req, res) => {
+    console.log('Here');
     try {
         const dbUserData = await User.create({
             username: req.body.username,
@@ -13,7 +14,7 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.loggedIn = true;
 
-            res.status(200).json(dbUserData);
+            res.status(200).render('homepage', { dbUserData });
         });
     } catch (err) {
         console.log(err);
@@ -49,9 +50,7 @@ router.post('/login', async (req, res) => {
         req.session.save(() => {
             req.session.loggedIn = true;
 
-            res
-                .status(200)
-                .json({ user: dbUserData, message: 'You are now logged in!' });
+            res.status(200).render('homepage', { dbUserData });
         });
     } catch (err) {
         console.log(err);
@@ -60,10 +59,11 @@ router.post('/login', async (req, res) => {
 });
 
 // Logout
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
+    console.log('logout here')
     if (req.session.loggedIn) {
         req.session.destroy(() => {
-            res.status(204).end();
+            res.render('login')
         });
     } else {
         res.status(404).end();
