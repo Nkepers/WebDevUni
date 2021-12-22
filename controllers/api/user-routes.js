@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const sgMail = require('@sendgrid/mail')
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -13,6 +14,23 @@ router.post('/', async (req, res) => {
 
         req.session.save(() => {
             req.session.loggedIn = true;
+
+            sgMail.setApiKey(process.env.SEND_GRID_API)
+            const msg = {
+                to: '', // Change to your recipient
+                from: 'webdeveloperuni@gmail.com', // Change to your verified sender
+                subject: 'Sending with SendGrid is Fun',
+                text: 'and easy to do anywhere, even with Node.js',
+                html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+            }
+            sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent')
+                })
+                .catch((error) => {
+                    console.error(error.response.body)
+                })
 
             res.status(200).render('homepage', { dbUserData });
         });
