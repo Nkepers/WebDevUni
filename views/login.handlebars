@@ -1,11 +1,11 @@
-<form class="login-form">
+<form class="login-form" action="/api/users/login" method="POST">
     <div>
-        <label for="email-login">email:</label>
-        <input type="text" id="email-login" />
+        <label for="email">email:</label>
+        <input type="text" id="email" name="email" />
     </div>
     <div>
-        <label for="password-login">password:</label>
-        <input type="password" id="password-login" />
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" />
     </div>
     <div>
         <button type="submit">login</button>

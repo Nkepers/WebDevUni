@@ -1,24 +1,27 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <html>
-    <head>
-        <link rel="stylesheet" href="/stylesheets/style.css" />
-        <title>WebDevUnited</title>
-        <meta charset="UTF-8"/>
-    </head>
-    <body>
-       <div class="wrapper">
-           <header>
-               <h1>
-                   <a href="/">Web Dev United</a>
-               </h1>
-               <nav>
-                   <a href="/login">login</a>
-               </nav>
-           </header>
-           <main>
-               {{{ body }}}
-           </main>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>WebDevUnited</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Web Dev United</a>
+            </h1>
+            <nav>
+                <a href="/login">login</a>
+                <a href="/api/users/logout">logout</a>
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
         <section class="hero"></section>
         <section></section>
         <section></section>
@@ -26,8 +29,8 @@
         <footer>
             Welcome to Web Dev United!
         </footer>
-        
-       </div>
-       <script src="javascript/logout.js"></script>
-    </body>
+
+    </div>
+</body>
+
 </html>
