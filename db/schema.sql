@@ -1,3 +1,3 @@
-DROP DATABASE if EXISTS account;
+DROP DATABASE if EXISTS accounts;
 
-CREATE DATABASE account;
+CREATE DATABASE accounts;
