@@ -35,8 +35,8 @@ header {
     justify-content: center;
 }
 .input{
-    height: 20px;
-    width: 20px;
+    height: 100px;
+    width: 380px;
 }
 .wrapper {
   display: flex;
