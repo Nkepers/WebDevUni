@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Body extends Model { };
+class Question extends Model { };
 
-Body.init(
+Question.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,12 +14,15 @@ Body.init(
         text: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        language: {
+            type: DataTypes.STRING,
         }
     },
     {
         sequelize,
-        modelName: 'body'
+        modelName: 'question'
     }
 );
 
-module.exports = Body;
+module.exports = Question;
