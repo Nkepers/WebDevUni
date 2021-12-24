@@ -10,7 +10,32 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: #0d63a5;
+    background: #aaccc3;
+
+}
+header {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7eca9c;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+.postStack{
+    display: flex;
+    
+}
+.post {
+    display: flex;
+    justify-content: center;
+}
+.input{
+    height: 100px;
+    width: 380px;
+
 }
 .wrapper {
   display: flex;
