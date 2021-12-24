@@ -9,44 +9,28 @@
 </head>
 
 <body>
+  <h1>Web Dev United</h1>
+  <nav>
+    <button id="logout">Logout</button></a>
+  </nav>
 
-  <header>
+  <p>Choose the language you are referencing:</p>
 
-    <h2>
-      WebDevUnited
-    </h2>
+  <form>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+  </form>
 
-    <nav>
-      <a href="/login">logout</a>
-    </nav>
+  <input type="text" id="userPost"/>
+  <button>Post</button>
 
-  </header>
-
-  <section class="postStack">
-    <div class="post">
-
-
-    <form>
-      <p>Choose the language you are referencing:</p>
-      <input type="radio" id="html" name="fav_language" value="HTML">
-      <label for="html">HTML</label><br>
-      <input type="radio" id="css" name="fav_language" value="CSS">
-      <label for="css">CSS</label><br>
-      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-      <label for="javascript">JavaScript</label>
-    </form>
-    </div>
-
-    <div class="input">
-
-
-      <input type="text" />
-      <button>Post</button>
-
-    </div>
-  </section>
-  <section class="userPost">
-    <div id="userPosts">
+  <section>
+    <div id="generalPost">
+      {{test}}
 
     </div>
   </section>

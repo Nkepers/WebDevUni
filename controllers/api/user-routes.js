@@ -15,6 +15,8 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.loggedIn = true;
 
+            res.sendStatus(200)
+
             sgMail.setApiKey(process.env.SEND_GRID_API)
             const msg = {
                 to: '', // Change to your recipient
@@ -31,9 +33,8 @@ router.post('/', async (req, res) => {
                 .catch((error) => {
                     console.error(error.response.body)
                 })
-
-            res.status(200).render('homepage', { dbUserData });
         });
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -67,9 +68,10 @@ router.post('/login', async (req, res) => {
 
         req.session.save(() => {
             req.session.loggedIn = true;
-
-            res.status(200).render('homepage', { dbUserData });
         });
+
+        res.sendStatus(200)
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -81,7 +83,7 @@ router.get('/logout', (req, res) => {
     console.log('logout here')
     if (req.session.loggedIn) {
         req.session.destroy(() => {
-            res.render('login')
+            res.render('/login')
         });
     } else {
         res.status(404).end();
