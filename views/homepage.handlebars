@@ -14,33 +14,45 @@
       WebDevUnited
     </h2>
     <nav>
-      <a href="/login"><button>Logout</button></a>
+      <a href="/login"><button class="button is-success">Logout</button></a>
     </nav>
 
   </header>
 
-  <section class="post">
+  <div class="columns is-vcentered">
+    <section class="column notification is-primary">
 
-  <p>Choose the language you are referencing:</p>
+      <p>Choose the language you are referencing:</p>
 
-  <form>
-    <input type="radio" id="html" name="fav_language" value="HTML">
-    <label for="html">HTML</label><br>
-    <input type="radio" id="css" name="fav_language" value="CSS">
-    <label for="css">CSS</label><br>
-    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-    <label for="javascript">JavaScript</label>
-  </form>
-  </section>
+      <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+      </form>
+    </section>
 
-  <section class="post">
-
-
-  <input class="input" type="text" id="userPost" />
-  <button>Post</button>
+    <section class="column notification is-success">
 
 
-  </section>
+      <input class="input" type="text" id="userPost" />
+      <button>Post</button>
+
+
+    </section>
+
+    <section class="column">
+
+    <div class="notification is-primary">
+      <button class="button is-success">
+
+      </button>
+    </div>
+
+    </section>
+  </div>
 
 
 </body>
