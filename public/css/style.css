@@ -35,7 +35,10 @@ header {
 .input{
     height: 100px;
     width: 380px;
-
+}
+.inputButton{
+  height: 50px;
+  width: 50px;
 }
 .wrapper {
   display: flex;
