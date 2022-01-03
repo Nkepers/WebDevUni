@@ -9,6 +9,9 @@
   font-family: "Big Shoulders Inline Text", cursive;
   font-family: "Poppins", sans-serif;
 }
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 body {
     background: #aaccc3;
 
